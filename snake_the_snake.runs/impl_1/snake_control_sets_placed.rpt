@@ -1,0 +1,250 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Dec  6 23:16:10 2023
+| Host         : HP-Omen-Charles running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file snake_control_sets_placed.rpt
+| Design       : snake
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   180 |
+| Unused register locations in slices containing registers |   396 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      4 |            3 |
+|      8 |            3 |
+|     10 |            1 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |          168 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            7520 |         1522 |
+| No           | No                    | Yes                    |             294 |           61 |
+| No           | Yes                   | No                     |             108 |           25 |
+| Yes          | No                    | No                     |            3418 |          750 |
+| Yes          | No                    | Yes                    |             144 |           42 |
+| Yes          | Yes                   | No                     |              88 |           21 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+-----------------------------------------------+-----------------------------------------+------------------+----------------+
+|             Clock Signal             |                 Enable Signal                 |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
++--------------------------------------+-----------------------------------------------+-----------------------------------------+------------------+----------------+
+|  SCORE/encode_result2_reg[5]_i_2_n_0 |                                               | SCORE/encode_result2_reg[5]_i_3_n_0     |                1 |              2 |
+|  SNAKE_STATE/seg[6][1]               |                                               | SNAKE_STATE/AR[1]                       |                1 |              2 |
+|  SNAKE_STATE/seg[6]_2[1]             |                                               | SNAKE_STATE/seg[6]_1[1]                 |                1 |              2 |
+|  SCORE/encode_result2_reg[4]_i_2_n_0 |                                               | SCORE/encode_result2_reg[4]_i_3_n_0     |                1 |              4 |
+|  SNAKE_STATE/seg[6][0]               |                                               | SNAKE_STATE/AR[0]                       |                1 |              4 |
+|  SNAKE_STATE/seg[6]_2[0]             |                                               | SNAKE_STATE/seg[6]_1[0]                 |                1 |              4 |
+|  SCORE/encode_result2_reg[6]_i_2_n_0 |                                               | SCORE/encode_result2_reg[6]_i_3_n_0     |                1 |              8 |
+|  SNAKE_STATE/seg[6][2]               |                                               | SNAKE_STATE/AR[2]                       |                2 |              8 |
+|  SNAKE_STATE/seg[6]_2[2]             |                                               | SNAKE_STATE/seg[6]_1[2]                 |                2 |              8 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[0][4]_i_1_n_0      | BUTTON/reset                            |                3 |             10 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[0][10]_i_1_n_0     | BUTTON/reset                            |                2 |             12 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/j[9]_i_2__0_n_0                   | SNAKE_STATE/j[9]_i_1__0_n_0             |                1 |             14 |
+|  clk_IBUF_BUFG                       | BUTTON/left_button_pressed_1                  |                                         |                2 |             16 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_size[9]_i_1_n_0             | BUTTON/reset                            |                8 |             20 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/max_speed0                        | BUTTON/reset                            |                2 |             20 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/i                                 |                                         |                7 |             20 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/i                                 | SNAKE_STATE/i[9]_i_1__0_n_0             |                6 |             20 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/idx_reset_snake[9]_i_1_n_0        | BUTTON/reset                            |                6 |             20 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[97][10]_P_i_1_n_0  |                                         |                8 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[91][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[9][10]_P_i_1_n_0   |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[99][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[98][10]_P_i_1_n_0  |                                         |                8 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/E[0]                              | BUTTON/reset                            |                7 |             22 |
+|  clk_IBUF_BUFG                       | APPLE_GENERATOR/apple_result_reg[10][0]       |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[65][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[62][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[66][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[63][10]_P_i_1_n_0  |                                         |               10 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[64][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[67][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[68][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[100][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[101][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[106][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[104][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[105][10]_P_i_1_n_0 |                                         |                8 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[102][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[103][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[107][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[113][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[10][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[108][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[112][10]_P_i_1_n_0 |                                         |                8 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[111][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[110][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[109][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[115][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[116][10]_P_i_1_n_0 |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[114][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[117][10]_P_i_1_n_0 |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[119][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[11][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[118][10]_P_i_1_n_0 |                                         |                8 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[126][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[120][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[122][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[125][10]_P_i_1_n_0 |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[124][10]_P_i_1_n_0 |                                         |                8 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[121][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[123][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[131][10]_P_i_1_n_0 |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[130][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[129][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[128][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[132][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[127][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[12][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[136][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[133][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[137][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[135][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[138][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[134][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[145][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[13][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[144][10]_P_i_1_n_0 |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[142][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[140][10]_P_i_1_n_0 |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[141][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[139][10]_P_i_1_n_0 |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[143][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[15][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[14][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[146][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[149][10]_P_i_1_n_0 |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[147][10]_P_i_1_n_0 |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[148][10]_P_i_1_n_0 |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[20][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[17][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[19][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[1][10]_P_i_1_n_0   |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[21][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[18][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[16][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[22][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[26][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[24][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[25][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[27][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[23][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[29][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[28][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[2][10]_P_i_1_n_0   |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[32][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[30][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[31][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[33][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[34][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[38][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[35][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[36][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[37][10]_P_i_1_n_0  |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[39][10]_P_i_1_n_0  |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[3][10]_P_i_1_n_0   |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[41][10]_P_i_1_n_0  |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[40][10]_P_i_1_n_0  |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[42][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[48][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[46][10]_P_i_1_n_0  |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[44][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[47][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[43][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[45][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[53][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[51][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[4][10]_P_i_1_n_0   |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[50][10]_P_i_1_n_0  |                                         |                7 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[54][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[49][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[52][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[5][10]_P_i_1_n_0   |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[58][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[59][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[57][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[55][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[56][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[61][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[60][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[69][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[72][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[71][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[73][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[6][10]_P_i_1_n_0   |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[70][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[74][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[75][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[77][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[79][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[78][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[76][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[80][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[83][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[85][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[84][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[81][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[7][10]_P_i_1_n_0   |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[82][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[90][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[86][10]_P_i_1_n_0  |                                         |                6 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[88][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[89][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[87][10]_P_i_1_n_0  |                                         |                3 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[8][10]_P_i_1_n_0   |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[93][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[95][10]_P_i_1_n_0  |                                         |                5 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[92][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[94][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/snake_position[96][10]_P_i_1_n_0  |                                         |                4 |             22 |
+|  clk_25MHz_BUFG                      | VGA/video_on                                  | VGA/vgaRed[3]_i_1_n_0                   |                6 |             24 |
+|  clk_IBUF_BUFG                       | VGA/i[9]_i_1_n_0                              | VGA/i0                                  |                8 |             30 |
+|  clk_IBUF_BUFG                       |                                               | nolabel_line184/digit_timer[16]_i_1_n_0 |                4 |             32 |
+|  clk_IBUF_BUFG                       |                                               | VGA/i0                                  |               10 |             34 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/idx_collision_self[9]_P_i_1_n_0   |                                         |                3 |             36 |
+|  clk_25MHz_BUFG                      | BUTTON/E[0]                                   | BUTTON/reset                            |               14 |             40 |
+|  clk_IBUF_BUFG                       | SNAKE_STATE/idx_upd_snake[9]_i_1_n_0          |                                         |                9 |             46 |
+|  clk_IBUF_BUFG                       |                                               | btnC_IBUF                               |                7 |             66 |
+|  clk_IBUF_BUFG                       |                                               | BUTTON/reset                            |               17 |             90 |
+|  clk_25MHz_BUFG                      |                                               | BUTTON/reset                            |               37 |            138 |
+|  clk_IBUF_BUFG                       |                                               |                                         |             1522 |           7520 |
++--------------------------------------+-----------------------------------------------+-----------------------------------------+------------------+----------------+
+
+
